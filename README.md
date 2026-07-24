@@ -12,7 +12,7 @@ To develop a data-driven framework that helps assess the creditworthiness of rec
 
 * Python
 * MySQL
-* Microsoft Excel
+* Microsoft Excel (financial modeling: ratio analysis, rule-based credit scorecard, sensitivity analysis, dashboard)
 
 ## Dataset
 
@@ -85,6 +85,8 @@ Waste_to_Wealth_Credit_Optimizer
 * Generated loan approval recommendations.
 * Integrated financial and sustainability indicators into decision-making.
 * Performed SQL-based business analytics and reporting.
+* Built a financial modeling layer in Excel with ratio analysis, a rule-based credit scorecard, and sensitivity analysis on lending thresholds.
+* Identified that sustainability performance and credit risk are not directly correlated, reinforcing the need for multi-factor lending decisions.
 
 ## Skills Demonstrated
 
@@ -95,3 +97,17 @@ Waste_to_Wealth_Credit_Optimizer
 * Financial Analysis
 * Business Intelligence
 * Sustainability Analytics
+* Financial Modeling
+* Sensitivity Analysis
+* Excel-based Rule Engine Design
+
+### 6. Excel Financial Modeling Layer
+
+To complement the Python/MySQL pipeline with hands-on financial modeling, a multi-sheet Excel workbook was built on top of the dataset:
+
+* **Ratio Analysis** — Debt-to-Equity, Cash-Flow-to-Loan, and Profit Margin computed per company
+* **Credit Scorecard** — a fully explainable, rule-based scoring engine built using nested IF/AND/OR formulas, replicating the credit decision logic directly in Excel (Approved / Manual Review / Rejected). This mirrors how credit risk systems are typically built in regulated lending environments, favoring transparency over black-box models.
+* **Sensitivity Analysis** — a data table testing how the overall approval rate shifts as the Debt-to-Equity threshold is tightened or loosened, visualized as a line chart
+* **Summary Dashboard** — KPI cards (total companies, approval rate, avg credit score, avg CO₂ saved by approved companies) plus charts for risk category distribution and average CO₂ saved by risk category
+
+**Key insight:** Rejected companies had the *highest* average CO₂ saved (4451.72) compared to Approved companies (4275.59) — showing that strong environmental performance alone does not guarantee creditworthiness; financial health and regulatory compliance remain the primary drivers of the lending decision.
