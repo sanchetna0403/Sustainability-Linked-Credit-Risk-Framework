@@ -1,4 +1,4 @@
-# Waste-to-Wealth Credit Optimizer
+# Sustainability-Linked Credit Risk Framework
 
 ## Overview
 
