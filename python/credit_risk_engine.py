@@ -16,23 +16,10 @@ def loan_decision(row):
     cashflow = row["Cash_Flow_USD"]
 
     # Strong companies
-    if (
-        score >= 80
-        and debt < 1.5
-        and compliance >= 80
-        and cashflow > 0
-    ):
+    if score >= 70 and debt <= 1 and compliance >= 60:
         return "Approved"
-
-    # Weak companies
-    elif (
-        score < 60
-        or debt > 3
-        or cashflow < 0
-    ):
+    elif score < 50 or debt > 2:
         return "Rejected"
-
-    # Medium-risk companies
     else:
         return "Manual Review"
 
@@ -73,7 +60,7 @@ df.to_excel(
 )
 
 # Print results
-print("\n========== WASTE-TO-WEALTH CREDIT OPTIMIZER ==========\n")
+print("\n========== SUSTAINABILITY-LINKED CREDIT RISK FRAMEWORK ==========\n")
 
 print(f"Total Companies Evaluated : {total_companies}")
 print(f"Approved                  : {approved}")
